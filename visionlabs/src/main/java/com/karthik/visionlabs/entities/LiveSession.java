@@ -20,6 +20,8 @@ public class LiveSession {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long sessionId;
+
+    private String streamId; // Id returned by ZenStream
     private String title;
     private String description;
 
