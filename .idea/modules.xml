@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/visionlabs.iml" filepath="$PROJECT_DIR$/.idea/visionlabs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/visionlabs/visionlabs.iml" filepath="$PROJECT_DIR$/visionlabs/visionlabs.iml" />
     </modules>
   </component>
 </project>

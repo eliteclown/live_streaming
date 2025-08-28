@@ -88,6 +88,30 @@ public class CallService {
                 .body(request)
                 .retrieve()
                 .toEntity(createStreamResponseDTO.class);
+        return response.getBody();
 
     }
+
+    public void startStream(String streamId){
+        String url = String.format("%s/streams/%s/start", baseUrl, streamId);
+        HttpHeaders headers= new HttpHeaders();
+        headers.set("Authorization","Bearer"+ apiKey);
+        restClient.post()
+                .uri(url)
+                .body(new HttpEntity<>(headers))
+                .retrieve()
+                .toEntity(Void.class);
+    }
+
+    public void stopStream(String streamId){
+        String url = String.format("%s/streams/%s/stop", baseUrl, streamId);
+        HttpHeaders headers= new HttpHeaders();
+        restClient.post()
+                .uri(url)
+                .body(new HttpEntity<>(headers))
+                .retrieve()
+                .toEntity(Void.class);
+
+    }
+
 }
